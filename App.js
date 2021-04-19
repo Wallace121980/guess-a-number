@@ -9,7 +9,7 @@ import GameScreen from './screens/GameScreen';
 import GameOverScreen from './screens/GameOverScreen';
 
 const fetchFonts = () => {
-  Font.loadAsync({
+  return Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   });
@@ -44,6 +44,13 @@ export default function App() {
   };
 
   let content = <StartGameScreen onStartGame={StartGameHandler} />;
+  content = (
+    <GameOverScreen
+      roundsNumber={1}
+      userNumber={1}
+      onRestart={configureNewGameHandler}
+    />
+  );
 
   if (userNumber && guessRounds <= 0) {
     content = (

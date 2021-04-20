@@ -7,6 +7,7 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  SafeAreaView,
 } from 'react-native';
 
 import BodyText from '../components/BodyText';

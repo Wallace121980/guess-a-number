@@ -16,7 +16,7 @@ import Colors from '../constants/colors';
 
 const GameOverScreen = (props) => {
   const [availableDeviceWidth, setAvailableDeviceWidth] = useState(
-    Dimensions.get('window').height
+    Dimensions.get('window').width
   );
   const [availableDeviceHeight, setAvailableDeviceHeight] = useState(
     Dimensions.get('window').height
